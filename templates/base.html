@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{% block meta_description %}George Sackie - Developer, Designer, Innovator. Personal portfolio showcasing skills, projects, and professional experience.{% endblock %}">
+    <title>{% block title %}George Sackie - Developer • Designer • Innovator{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="{{ url_for('home') }}" class="logo">George Sackie</a>
+            <nav>
+                <ul>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                    <li><a href="{{ url_for('resume') }}">Resume</a></li>
+                    <li><a href="{{ url_for('projects') }}">Projects</a></li>
+                    <li><a href="{{ url_for('add_project') }}">Add Project</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Flash messages -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for category, message in messages %}
+                        <div class="flash flash-{{ category }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 George Sackie | Designed with Cursor AI</p>
+            <div class="footer-links">
+                <a href="mailto:gsackiejr@gmail.com">Email</a>
+                <a href="https://linkedin.com/in/george-sackie" target="_blank">LinkedIn</a>
+                <a href="https://github.com/gsackie" target="_blank">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+
+{% block meta_description %}About George Sackie - Learn about my background, interests, and journey as a developer and designer.{% endblock %}
+{% block title %}About Me - George Sackie{% endblock %}
+
+{% block content %}
+<section class="profile-section">
+    <div class="profile-image-container">
+        <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="George Sackie - Professional headshot" class="profile-image">
+    </div>
+    <div class="bio-content">
+        <h2>Hello, I'm George!</h2>
+        <p>
+            I'm a technologist, designer, and problem-solver currently pursuing my Master of Science 
+            in Information Systems (MSIS) at the Kelley School of Business, Indiana University. I also 
+            hold a B.S. in Computer Science from IU's Luddy School of Informatics, Computing, and Engineering.
+        </p>
+        <p>
+            My professional journey has been shaped by three summer rotations at GE Appliances, where 
+            I've worked as an Engineering Technician and Software Engineering Intern. I've contributed 
+            to real-world embedded systems and user interfaces for appliances — collaborating across C, 
+            Lua, and JavaScript to create intuitive and reliable experiences.
+        </p>
+        <p>
+            I see technology as both a creative and connective force — one that can power smarter 
+            systems, stronger communities, and more human-centered design. My goal is to keep building 
+            those connections, one project at a time.
+        </p>
+    </div>
+</section>
+
+<section class="card">
+    <h2>Academic Journey</h2>
+    <div class="academic-timeline">
+        <div class="timeline-item">
+            <h3>Master of Science in Information Systems (MSIS)</h3>
+            <p class="institution">Kelley School of Business, Indiana University</p>
+            <p class="status">Currently Pursuing</p>
+        </div>
+        <div class="timeline-item">
+            <h3>Bachelor of Science in Computer Science</h3>
+            <p class="institution">Luddy School of Informatics, Computing, and Engineering, Indiana University</p>
+            <p class="status">Completed</p>
+        </div>
+    </div>
+    <p>
+        My academic journey has provided me with a strong foundation in both technical 
+        engineering and business strategy. The combination of computer science fundamentals 
+        and information systems knowledge allows me to bridge the gap between technical 
+        implementation and business value.
+    </p>
+</section>
+
+<section class="card">
+    <h2>Professional Experience</h2>
+    <div class="experience-grid">
+        <div class="experience-item">
+            <h3>GE Appliances</h3>
+            <p class="role">Engineering Technician & Software Engineering Intern</p>
+            <p class="duration">Three Summer Rotations</p>
+            <p>Contributed to real-world embedded systems and user interfaces for appliances, 
+            collaborating across C, Lua, and JavaScript to create intuitive and reliable experiences. 
+            Returning in Spring 2026 for my fourth rotation.</p>
+        </div>
+        <div class="experience-item">
+            <h3>Resident Assistant</h3>
+            <p class="role">Indiana University</p>
+            <p class="duration">Two Years</p>
+            <p>Built inclusive living environments, supported over seventy residents, and organized 
+            creative programs that brought people together.</p>
+        </div>
+        <div class="experience-item">
+            <h3>National Society of Black Engineers (NSBE)</h3>
+            <p class="role">Executive Board Member</p>
+            <p class="duration">Current</p>
+            <p>Led the design and launch of our chapter's official website and hosted events 
+            connecting students with industry professionals.</p>
+        </div>
+        <div class="experience-item">
+            <h3>Kilroy's Sports</h3>
+            <p class="role">Marketing & Event Design</p>
+            <p class="duration">Current</p>
+            <p>Design themed events and promotional campaigns that connect the campus community 
+            through energy and creativity.</p>
+        </div>
+    </div>
+</section>
+
+<section class="card">
+    <h2>Creative Pursuits</h2>
+    <div class="creative-grid">
+        <div class="creative-item">
+            <h3>Music & Performance</h3>
+            <p>I'm a carillon player at Indiana University, performing on one of the few 
+            university carillons in the nation. This experience blends rhythm, focus, and 
+            artistry, teaching me the importance of precision and timing in both music and code.</p>
+        </div>
+        <div class="creative-item">
+            <h3>Marketing & Design</h3>
+            <p>At Kilroy's Sports, I design themed events and promotional campaigns that 
+            connect the campus community through energy and creativity. This role allows me 
+            to apply design thinking to real-world marketing challenges.</p>
+        </div>
+    </div>
+</section>
+
+<section class="card">
+    <h2>Fun Facts</h2>
+    <div class="fun-facts-grid">
+        <div class="fun-fact-item">
+            <h3>🌍 Heritage</h3>
+            <p>Born in Liberia, West Africa</p>
+        </div>
+        <div class="fun-fact-item">
+            <h3>🎹 Musical Talents</h3>
+            <p>Play piano and carillon</p>
+        </div>
+        <div class="fun-fact-item">
+            <h3>☕ Unique Trait</h3>
+            <p>Never had coffee (and still coding strong!)</p>
+        </div>
+        <div class="fun-fact-item">
+            <h3>🌮 Local Favorite</h3>
+            <p>Favorite restaurant in Bloomington is Chubbies Burritos</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

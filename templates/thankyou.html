@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block meta_description %}Thank You - George Sackie has received your message and will respond soon.{% endblock %}
+{% block title %}Thank You - George Sackie{% endblock %}
+
+{% block content %}
+<section class="thank-you">
+    <h1>Thank You!</h1>
+    <p style="font-size: 1.5rem; color: var(--neon-cyan); margin-bottom: 2rem;">
+        Your message has been received successfully.
+    </p>
+    <p>
+        I appreciate you taking the time to reach out! I'll review your message and get back to you 
+        within 24 hours. In the meantime, feel free to explore more of my work or connect with me 
+        on social media.
+    </p>
+    
+    <div style="margin: 3rem 0;">
+        <a href="{{ url_for('home') }}" class="btn">Return to Homepage</a>
+        <a href="{{ url_for('projects') }}" class="btn btn-secondary">View My Projects</a>
+    </div>
+
+    <div class="card" style="max-width: 600px; margin: 0 auto;">
+        <h2>What's Next?</h2>
+        <ul style="color: var(--text-secondary); line-height: 1.8; text-align: left;">
+            <li>I'll review your message and respond within 24 hours</li>
+            <li>If you're interested in a project, I'll schedule a consultation call</li>
+            <li>For job opportunities, I'll review your requirements and respond accordingly</li>
+            <li>Feel free to follow up if you don't hear back within the expected timeframe</li>
+        </ul>
+    </div>
+
+    <div style="margin-top: 3rem;">
+        <h3>Stay Connected</h3>
+        <div class="footer-links" style="margin-top: 1rem;">
+            <a href="mailto:gsackiejr@gmail.com">Email</a>
+            <a href="https://linkedin.com/in/george-sackie" target="_blank">LinkedIn</a>
+            <a href="https://github.com/gsackie" target="_blank">GitHub</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

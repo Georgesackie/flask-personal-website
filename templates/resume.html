@@ -1,0 +1,192 @@
+{% extends "base.html" %}
+
+{% block meta_description %}George Sackie's Resume - Professional experience, education, and technical skills.{% endblock %}
+{% block title %}Resume - George Sackie{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <h1>My Resume</h1>
+    <p class="tagline">Professional Experience & Skills</p>
+</section>
+
+<section class="resume-section">
+    <h2>Professional Summary</h2>
+    <p style="color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 2rem;">
+        Technologist and problem-solver with extensive experience in embedded systems, 
+        full-stack development, and engineering solutions. Proven track record at GE Appliances 
+        with three successful rotations, strong academic foundation in Computer Science and 
+        Information Systems, and leadership experience in community building and professional development.
+    </p>
+</section>
+
+<section class="resume-section">
+    <h2>Technical Skills</h2>
+    <div class="skills-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+        <div class="card">
+            <h3>Programming & Web</h3>
+            <ul style="color: var(--text-secondary);">
+                <li>Python, SQL, Java, C, C++</li>
+                <li>React, Node.js, HTML/CSS</li>
+                <li>Django, Android, Bootstrap</li>
+                <li>jQuery, JavaScript</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Frameworks & Tools</h3>
+            <ul style="color: var(--text-secondary);">
+                <li>PostgreSQL, MongoDB</li>
+                <li>AWS, Google Cloud</li>
+                <li>Git, Agile Workflows</li>
+                <li>APIs, Render</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Embedded Systems</h3>
+            <ul style="color: var(--text-secondary);">
+                <li>C, Lua, JavaScript</li>
+                <li>EMI Testing & Analysis</li>
+                <li>Control Board Validation</li>
+                <li>Temperature Controller Calibration</li>
+            </ul>
+        </div>
+        <div class="card">
+            <h3>Data & Analysis</h3>
+            <ul style="color: var(--text-secondary);">
+                <li>XMPro Data Analysis</li>
+                <li>Root Cause Analysis</li>
+                <li>Process Improvement</li>
+                <li>Design Thinking</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="resume-section">
+    <h2>Professional Experience</h2>
+    
+    <div class="resume-item">
+        <h4>Software Engineering Intern</h4>
+        <p class="date">May 2025 - August 2025 | General Electric Appliances</p>
+        <ul style="color: var(--text-secondary); margin-left: 1rem;">
+            <li>Driving design and development of embedded features for next-gen LCD ovens and ranges, leveraging C, Lua, and JavaScript to enhance performance, system architecture, and overall user experience</li>
+            <li>Refactor legacy code and implement test driven development workflows, improving data accuracy and ensuring consistent parametric data flow across evolving product platforms</li>
+        </ul>
+    </div>
+
+    <div class="resume-item">
+        <h4>Engineering Technician</h4>
+        <p class="date">June 2024 - August 2024 | General Electric Appliances</p>
+        <ul style="color: var(--text-secondary); margin-left: 1rem;">
+            <li>Diagnosed and mitigated electromagnetic interference (EMI) in prototype cooking appliances through root cause analysis, enabling compliance with regulatory and security standards</li>
+            <li>Collaborated with engineers to test and validate embedded control boards, strengthening systems design and integration consistency</li>
+        </ul>
+    </div>
+
+    <div class="resume-item">
+        <h4>Engineering Technician</h4>
+        <p class="date">May 2023 - August 2023 | General Electric Appliances</p>
+        <ul style="color: var(--text-secondary); margin-left: 1rem;">
+            <li>Improved refrigeration performance by calibrating temperature controllers to correct regulation drift</li>
+            <li>Leveraged XMPro and data analysis to identify recurring faults, recommending design improvements that improved long term system architecture decisions</li>
+        </ul>
+    </div>
+
+    <div class="resume-item">
+        <h4>Strategy Consulting Extern</h4>
+        <p class="date">June 2023 - August 2023 | PwC (Remote)</p>
+        <ul style="color: var(--text-secondary); margin-left: 1rem;">
+            <li>Conducted client needs assessments and developed process improvements for the Colorado I Have a Dream Foundation, applying consulting frameworks, design thinking, and business requirements analysis</li>
+            <li>Delivered data driven strategies that boosted donor engagement and streamlined operations to drive long-term impact and sustainability</li>
+        </ul>
+    </div>
+
+    <div class="resume-item upcoming">
+        <h4>Remote Cloud Internship</h4>
+        <p class="date">January 2026 - May 2026 | General Electric Appliances (Upcoming)</p>
+        <ul style="color: var(--text-secondary); margin-left: 1rem;">
+            <li>Returning for fourth rotation to continue building expertise in cloud technologies and remote engineering solutions</li>
+        </ul>
+    </div>
+</section>
+
+<section class="resume-section">
+    <h2>Education</h2>
+    
+    <div class="resume-item">
+        <h4>Master of Science in Information Systems</h4>
+        <p class="date">May 2025 - Present | Indiana University, Kelley School of Business</p>
+        <p style="color: var(--text-secondary);">
+            Currently pursuing advanced studies in information systems and business technology
+        </p>
+    </div>
+
+    <div class="resume-item">
+        <h4>Bachelor of Science in Computer Science</h4>
+        <p class="date">Completed | Indiana University, Luddy School of Computing</p>
+        <p style="color: var(--text-secondary);">
+            GPA: 3.31/4.00 | Honors: Hudson and Holland Scholar; Dean's Scholarship Recipient
+        </p>
+    </div>
+</section>
+
+<section class="resume-section">
+    <h2>Leadership Experience</h2>
+    
+    <div class="resume-item">
+        <h4>Resident Assistant</h4>
+        <p class="date">March 2023 - May 2025 | Indiana University Residential Programs and Services</p>
+        <ul style="color: var(--text-secondary); margin-left: 1rem;">
+            <li>Mentored 73 residents, offering individualized support and building a positive academic and social community</li>
+            <li>Led inclusive programs that fostered wellness, diversity, and professional development opportunities for students</li>
+        </ul>
+    </div>
+
+    <div class="resume-item">
+        <h4>Executive Board Member/Web Manager</h4>
+        <p class="date">April 2022 - May 2025 | National Society of Black Engineers (NSBE)</p>
+        <ul style="color: var(--text-secondary); margin-left: 1rem;">
+            <li>Led the design and launch of the chapter's website by coordinating a cross-functional team, enhancing access to events, resources, and membership tools</li>
+            <li>Spearheaded campus-wide initiatives, including a student hackathon, by partnering with university sponsors to increase engagement and visibility among underrepresented students in tech</li>
+        </ul>
+    </div>
+</section>
+
+<section class="resume-section">
+    <h2>Academic Projects</h2>
+    
+    <div class="resume-item">
+        <h4>Integrated Vehicle Booking and User Management System</h4>
+        <p class="date">January 2024 - May 2024</p>
+        <ul style="color: var(--text-secondary); margin-left: 1rem;">
+            <li>Developed a full stack web application for vehicle reservations using ReactJS, Django, Python and PostgreSQL, designing UI mockups and implementing real time browsing, booking, and profile management</li>
+            <li>Collaborated with an agile development team to manage sprint planning, and deliver iterative enhancements and scalable system architecture</li>
+        </ul>
+    </div>
+</section>
+
+<section class="resume-section">
+    <h2>Additional Information</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+        <div>
+            <h4>Musical Talents</h4>
+            <p style="color: var(--text-secondary);">Piano and Carillon Player</p>
+        </div>
+        <div>
+            <h4>Creative Pursuits</h4>
+            <p style="color: var(--text-secondary);">Amateur DJ</p>
+        </div>
+        <div>
+            <h4>Heritage</h4>
+            <p style="color: var(--text-secondary);">Born in Liberia</p>
+        </div>
+    </div>
+</section>
+
+<section class="card" style="text-align: center; margin-top: 3rem;">
+    <h2>Download Resume</h2>
+    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+        Download a PDF version of my resume for your records.
+    </p>
+    <a href="{{ url_for('static', filename='images/Sackie_George_ResumeIBM.pdf') }}" class="btn" target="_blank">Download PDF</a>
+</section>
+{% endblock %}

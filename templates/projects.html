@@ -1,0 +1,209 @@
+{% extends "base.html" %}
+
+{% block meta_description %}George Sackie's Projects - Showcase of web applications, mobile apps, and software solutions.{% endblock %}
+{% block title %}Projects - George Sackie{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <h1>My Projects</h1>
+    <p class="tagline">Showcasing Innovation & Creativity</p>
+    <p class="intro">
+        Explore my portfolio of projects that demonstrate my skills in full-stack development, 
+        user experience design, and problem-solving. Each project represents a unique challenge 
+        and an opportunity to create something meaningful.
+    </p>
+    <div style="margin-top: 2rem;">
+        <a href="{{ url_for('add_project') }}" class="btn btn-primary">Add New Project</a>
+    </div>
+</section>
+
+{% if projects %}
+<section class="projects-table-section">
+    <h2>Project Portfolio</h2>
+    <div class="table-container">
+        <table class="projects-table">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Created</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for project in projects %}
+                <tr>
+                    <td class="image-cell">
+                        <img src="{{ url_for('static', filename='images/' + project[3]) }}" 
+                             alt="{{ project[1] }} Screenshot" 
+                             class="project-table-image"
+                             onerror="this.src='{{ url_for('static', filename='images/placeholder.png') }}'; this.alt='Image not found';">
+                    </td>
+                    <td class="title-cell">
+                        <h3>{{ project[1] }}</h3>
+                    </td>
+                    <td class="description-cell">
+                        <p>{{ project[2] }}</p>
+                    </td>
+                    <td class="date-cell">
+                        <small>{{ project[4][:10] if project[4] else 'N/A' }}</small>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
+{% else %}
+<section class="card">
+    <h2>No Projects Yet</h2>
+    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+        No projects have been added yet. Be the first to add a project!
+    </p>
+    <a href="{{ url_for('add_project') }}" class="btn btn-primary">Add Your First Project</a>
+</section>
+{% endif %}
+
+<section class="card" style="text-align: center; margin-top: 3rem;">
+    <h2>More Projects</h2>
+    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+        Check out my GitHub profile for more projects, contributions, and open-source work.
+    </p>
+    <a href="https://github.com/george-sackie" target="_blank" class="btn">View All Projects on GitHub</a>
+</section>
+
+<style>
+.projects-table-section {
+    margin: 2rem 0;
+}
+
+.table-container {
+    overflow-x: auto;
+    margin: 1rem 0;
+}
+
+.projects-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 255, 255, 0.1);
+}
+
+.projects-table th {
+    background: linear-gradient(135deg, var(--neon-cyan), var(--neon-purple));
+    color: var(--primary-bg);
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.projects-table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: top;
+}
+
+.projects-table tr:hover {
+    background: rgba(0, 255, 255, 0.05);
+}
+
+.image-cell {
+    width: 150px;
+    text-align: center;
+}
+
+.project-table-image {
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.project-table-image:hover {
+    transform: scale(1.05);
+    border-color: var(--neon-cyan);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+}
+
+.title-cell {
+    width: 200px;
+}
+
+.title-cell h3 {
+    margin: 0;
+    color: var(--neon-cyan);
+    font-size: 1.2rem;
+}
+
+.description-cell {
+    max-width: 400px;
+}
+
+.description-cell p {
+    margin: 0;
+    color: var(--text-primary);
+    line-height: 1.5;
+}
+
+.date-cell {
+    width: 120px;
+    text-align: center;
+}
+
+.date-cell small {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--neon-cyan), var(--neon-purple));
+    border: none;
+    color: var(--primary-bg);
+    font-weight: 600;
+    padding: 0.75rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.4);
+}
+
+@media (max-width: 768px) {
+    .projects-table {
+        font-size: 0.9rem;
+    }
+    
+    .projects-table th,
+    .projects-table td {
+        padding: 0.75rem 0.5rem;
+    }
+    
+    .image-cell {
+        width: 100px;
+    }
+    
+    .project-table-image {
+        width: 80px;
+        height: 60px;
+    }
+    
+    .title-cell {
+        width: 150px;
+    }
+    
+    .description-cell {
+        max-width: 200px;
+    }
+}
+</style>
+{% endblock %}

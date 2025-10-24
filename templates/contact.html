@@ -1,0 +1,254 @@
+{% extends "base.html" %}
+
+{% block meta_description %}Contact George Sackie - Get in touch for collaborations, job opportunities, or just to say hello.{% endblock %}
+{% block title %}Contact - George Sackie{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <h1>Get In Touch</h1>
+    <p class="tagline">Let's Create Something Amazing Together</p>
+    <p class="intro">
+        I'm always excited to discuss new opportunities, collaborate on interesting projects, 
+        or simply connect with fellow developers and creatives. Don't hesitate to reach out!
+    </p>
+</section>
+
+<section class="contact-info">
+    <div class="contact-details">
+        <h2>Contact Information</h2>
+        
+        <div class="card" style="margin-bottom: 2rem;">
+            <h3>Email</h3>
+            <p>
+                <a href="mailto:gsackiejr@gmail.com">gsackiejr@gmail.com</a>
+            </p>
+            <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                I typically respond within 24 hours
+            </p>
+        </div>
+
+        <div class="card" style="margin-bottom: 2rem;">
+            <h3>LinkedIn</h3>
+            <p>
+                <a href="https://linkedin.com/in/george-sackie" target="_blank">linkedin.com/in/george-sackie</a>
+            </p>
+            <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                Connect with me for professional networking
+            </p>
+        </div>
+
+        <div class="card" style="margin-bottom: 2rem;">
+            <h3>GitHub</h3>
+            <p>
+                <a href="https://github.com/gsackie" target="_blank">github.com/gsackie</a>
+            </p>
+            <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                Check out my code and open-source contributions
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Location</h3>
+            <p>Louisville, KY</p>
+            <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                Open to remote work and relocation
+            </p>
+        </div>
+    </div>
+
+    <div class="contact-form-container">
+        <h2>Send Me a Message</h2>
+        <form class="contact-form" id="contactForm" method="POST">
+            <div class="form-group">
+                <label for="firstName">First Name *</label>
+                <input 
+                    type="text" 
+                    id="firstName" 
+                    name="firstName" 
+                    required 
+                    minlength="2"
+                    pattern="[A-Za-z\s]+"
+                    title="Please enter a valid first name (letters and spaces only)"
+                >
+                <div class="error-message" id="firstNameError">Please enter a valid first name (at least 2 characters, letters only)</div>
+            </div>
+
+            <div class="form-group">
+                <label for="lastName">Last Name *</label>
+                <input 
+                    type="text" 
+                    id="lastName" 
+                    name="lastName" 
+                    required 
+                    minlength="2"
+                    pattern="[A-Za-z\s]+"
+                    title="Please enter a valid last name (letters and spaces only)"
+                >
+                <div class="error-message" id="lastNameError">Please enter a valid last name (at least 2 characters, letters only)</div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    required
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                    title="Please enter a valid email address"
+                >
+                <div class="error-message" id="emailError">Please enter a valid email address</div>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password *</label>
+                <input 
+                    type="password" 
+                    id="password" 
+                    name="password" 
+                    required 
+                    minlength="8"
+                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&]{8,}$"
+                    title="Password must be at least 8 characters with uppercase, lowercase, and number"
+                >
+                <div class="error-message" id="passwordError">Password must be at least 8 characters with uppercase, lowercase, and number</div>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password *</label>
+                <input 
+                    type="password" 
+                    id="confirmPassword" 
+                    name="confirmPassword" 
+                    required 
+                    minlength="8"
+                >
+                <div class="error-message" id="confirmPasswordError">Passwords do not match</div>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message (Optional)</label>
+                <textarea 
+                    id="message" 
+                    name="message" 
+                    rows="5" 
+                    style="width: 100%; padding: 1rem; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(0, 255, 255, 0.3); border-radius: 5px; color: var(--text-primary); font-size: 1rem; font-family: inherit; resize: vertical;"
+                    placeholder="Tell me about your project or just say hello!"
+                ></textarea>
+            </div>
+
+            <button type="submit" class="btn" style="width: 100%; margin-top: 1rem;">
+                Send Message
+            </button>
+        </form>
+    </div>
+</section>
+
+<section class="card" style="text-align: center; margin-top: 3rem;">
+    <h2>What I'm Looking For</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem;">
+        <div>
+            <h3>Full-Time Opportunities</h3>
+            <p style="color: var(--text-secondary);">
+                Senior developer roles, technical lead positions, or full-stack development opportunities
+            </p>
+        </div>
+        <div>
+            <h3>Freelance Projects</h3>
+            <p style="color: var(--text-secondary);">
+                Web applications, mobile apps, or consulting projects that challenge and inspire
+            </p>
+        </div>
+        <div>
+            <h3>Open Source</h3>
+            <p style="color: var(--text-secondary);">
+                Contributing to meaningful projects and collaborating with the developer community
+            </p>
+        </div>
+    </div>
+</section>
+
+<script>
+    // Form validation and error handling
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Clear previous errors
+        clearErrors();
+        
+        let isValid = true;
+        
+        // Validate first name
+        const firstName = document.getElementById('firstName');
+        if (!firstName.value.trim() || firstName.value.length < 2 || !/^[A-Za-z\s]+$/.test(firstName.value)) {
+            showError('firstNameError', 'Please enter a valid first name (at least 2 characters, letters only)');
+            isValid = false;
+        }
+        
+        // Validate last name
+        const lastName = document.getElementById('lastName');
+        if (!lastName.value.trim() || lastName.value.length < 2 || !/^[A-Za-z\s]+$/.test(lastName.value)) {
+            showError('lastNameError', 'Please enter a valid last name (at least 2 characters, letters only)');
+            isValid = false;
+        }
+        
+        // Validate email
+        const email = document.getElementById('email');
+        const emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i;
+        if (!email.value.trim() || !emailPattern.test(email.value)) {
+            showError('emailError', 'Please enter a valid email address');
+            isValid = false;
+        }
+        
+        // Validate password
+        const password = document.getElementById('password');
+        const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@$!%*?&]{8,}$/;
+        if (!password.value || password.value.length < 8 || !passwordPattern.test(password.value)) {
+            showError('passwordError', 'Password must be at least 8 characters with uppercase, lowercase, and number');
+            isValid = false;
+        }
+        
+        // Validate confirm password
+        const confirmPassword = document.getElementById('confirmPassword');
+        if (!confirmPassword.value || password.value !== confirmPassword.value) {
+            showError('confirmPasswordError', 'Passwords do not match');
+            isValid = false;
+        }
+        
+        if (isValid) {
+            // Submit the form
+            this.submit();
+        }
+    });
+    
+    // Real-time password confirmation validation
+    document.getElementById('confirmPassword').addEventListener('input', function() {
+        const password = document.getElementById('password').value;
+        const confirmPassword = this.value;
+        
+        if (confirmPassword && password !== confirmPassword) {
+            showError('confirmPasswordError', 'Passwords do not match');
+        } else {
+            hideError('confirmPasswordError');
+        }
+    });
+    
+    function showError(errorId, message) {
+        const errorElement = document.getElementById(errorId);
+        errorElement.textContent = message;
+        errorElement.style.display = 'block';
+    }
+    
+    function hideError(errorId) {
+        const errorElement = document.getElementById(errorId);
+        errorElement.style.display = 'none';
+    }
+    
+    function clearErrors() {
+        const errorElements = document.querySelectorAll('.error-message');
+        errorElements.forEach(error => {
+            error.style.display = 'none';
+        });
+    }
+</script>
+{% endblock %}

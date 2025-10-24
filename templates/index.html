@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block meta_description %}George Sackie - Developer, Designer, Innovator. Personal portfolio showcasing skills, projects, and professional experience.{% endblock %}
+{% block title %}George Sackie - Developer • Designer • Innovator{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <h1>George Sackie</h1>
+    <p class="tagline">Developer • Designer • Innovator</p>
+    <p class="intro">
+        Welcome to my digital space! I'm a passionate developer with a love for creating 
+        innovative solutions and beautiful user experiences. Explore my work, learn about 
+        my journey, and let's connect to build something amazing together.
+    </p>
+    <div class="hero-buttons">
+        <a href="{{ url_for('about') }}" class="btn">Learn More About Me</a>
+        <a href="{{ url_for('projects') }}" class="btn btn-secondary">View My Projects</a>
+    </div>
+</section>
+
+<section class="quick-links">
+    <div class="card">
+        <h2>About Me</h2>
+        <p>Discover my background, interests, and what drives me as a developer and creative professional.</p>
+        <a href="{{ url_for('about') }}" class="btn">Read My Story</a>
+    </div>
+    
+    <div class="card">
+        <h2>My Resume</h2>
+        <p>Explore my professional experience, education, and technical skills in detail.</p>
+        <a href="{{ url_for('resume') }}" class="btn">View Resume</a>
+    </div>
+    
+    <div class="card">
+        <h2>Projects</h2>
+        <p>Check out my latest projects and see how I bring ideas to life through code.</p>
+        <a href="{{ url_for('projects') }}" class="btn">See Projects</a>
+    </div>
+    
+    <div class="card">
+        <h2>Get In Touch</h2>
+        <p>Ready to collaborate? Let's discuss your next project or just say hello!</p>
+        <a href="{{ url_for('contact') }}" class="btn">Contact Me</a>
+    </div>
+</section>
+{% endblock %}
